@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ just_title }}{% endblock %}
+{% block content %}
+<h1>{{ just_text }}</h1>
+<div class="row">
+<p>
+<aside class="col-12 col-md-9">
+  <ul>
+    <div style="background-color:#A23AEB; ">
+    <li>
+      <font size="5", color="black", face="Georgia">
+      <em>Место рождения: Родился в Республике Башкортостан, в не большом городе Янаул.
+      </em>
+      <p><img src="{% static 'img/City.png' %}" width="400" height="400" class="d-inline-block align-top" alt="Город Янаул"></p>
+    </li> 
+    <li>
+      <em>Семья: Наша семья состоит из 4 человек: мама, папа, сестренка и я. В 2017 году женился и теперь у нас новая семья.
+      </em>
+      <p><img src="{% static 'img/wife.png' %}" width="400" height="300" class="d-inline-block align-top" alt="Я с женой"></p>
+    </li>
+    <li>
+      <em>Образование: Окончил гимназию в г.Янаул и поступил в УГНТУ в городе Уфа, получил квалификацию инженера.
+      </em>
+      <p><img src="{% static 'img/University.png' %}" width="400" height="300" class="d-inline-block align-top" alt="УГНТУ"></p>
+    </li>
+    </dav>
+  </ul>
+</aside>
+<article class="col-12 col-md-9">
+  <ul>
+    <div style="background-color:#50F5C1; ">
+    <li>
+      <em>Трудовая деятельность: После армии приехал работать в Курганскую область в компанию АО "Транснефть-Урал".
+                             Начинал работать товарным оператором, на данный момент заместитель начальника ЛПДС "Хохлы".
+      </em>
+       <p><img src="{% static 'img/job.png' %}" width="400" height="300" class="d-inline-block align-top" alt="На работе"></p>
+    </li>
+    <li>
+      <em>Домашнее животное: Есть кот, зовут Макар, ему 10 лет.
+      </em>
+      </font>
+      <p><img src="{% static 'img/Cat.png' %}" width="400" height="400" class="d-inline-block align-top" alt="Макар"></p>
+    </li>
+    </dav>
+  </ul>
+</article>
+</div>
+</p>
+{% endblock %} 
