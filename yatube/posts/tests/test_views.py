@@ -320,13 +320,14 @@ class PostPagesTests(TestCase):
     def test_follow_user(self):
         '''Тестирование возможности подписаться и отписаться'''
         follower_count = Follow.objects.count()
-        # user = self.user.username
-        Follow.objects.create(
-            user=self.user, author=self.user
-        )
+        another_user = User.objects.create_user(username='Leo')
+        self.another_client = Client()
+        self.another_client.force_login(another_user)
+        self.another_client.get(reverse(
+            'posts:profile_follow', args=[self.user.username]), follow=True)
         self.assertEqual(follower_count + 1, Follow.objects.count())
-        Follow.objects.filter(
-            user=self.user, author=self.user).delete()
+        self.another_client.get(reverse(
+            'posts:profile_unfollow', args=[self.user.username]), follow=True)
         self.assertEqual(follower_count, Follow.objects.count())
 
     def test_new_post_for_follower_true(self):

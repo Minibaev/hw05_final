@@ -1,6 +1,5 @@
 import shutil
 import tempfile
-# from yatube.posts.models import Comment
 
 from django.contrib.auth import get_user_model
 from django.test import Client, TestCase
