@@ -1,9 +1,8 @@
-static/
+
 htmlcov/
 .coverage
 .coverage.*
 coverage.xml
 *.cover
-staticfiles/
-media/
+
 
